@@ -1,15 +1,16 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const generoRoutes = require('./routes/generoRoutes');
 const directorRoutes = require('./routes/directorRoutes');
 const productoraRoutes = require('./routes/productoraRoutes');
 const tipoRoutes = require('./routes/tipoRoutes');
 const mediaRoutes = require('./routes/mediaRoutes');
+const { PORT } = require('./config');
 
 
 const app = express();
-const port = 3200;
 
 // Habilitar CORS para permitir solicitudes desde cualquier origen
 app.use(cors());
@@ -41,6 +42,5 @@ app.use('/almacenar/imagen_portada', express.static('almacenar/imagen_portada'))
 
 
 // Obtener routes para diferentes entidades
-app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
-});
+app.listen(PORT);
+  console.log('Servidor escuchando en', PORT);

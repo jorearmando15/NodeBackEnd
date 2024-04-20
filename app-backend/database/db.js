@@ -1,13 +1,26 @@
-// app/database/db.js
+// Requiere las variables de configuración
+const {
+  PORT,
+  DB_DATABASE,
+  DB_USER,
+  DB_PASSWORD, 
+  DB_HOST,
+  DB_PORT
+} = require('../config');
+
+// Requiere el módulo mysql2
 const mysql = require('mysql2');
 
+// Crea la conexión a la base de datos
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '12345678',
-  database: 'db_peliculas_series'
+  host: DB_HOST,
+  user: DB_USER,
+  password: DB_PASSWORD,
+  database: DB_DATABASE,
+  port: DB_PORT
 });
 
+// Intenta conectar a la base de datos
 db.connect((err) => {
   if (err) {
     console.error('Error al conectar a la base de datos: ' + err.message);
@@ -16,4 +29,5 @@ db.connect((err) => {
   }
 });
 
+// Exporta la conexión a la base de datos
 module.exports = db;
