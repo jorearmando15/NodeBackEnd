@@ -1,6 +1,5 @@
 // Requiere las variables de configuración
 const {
-  PORT,
   DB_DATABASE,
   DB_USER,
   DB_PASSWORD, 
