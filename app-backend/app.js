@@ -13,7 +13,9 @@ const { PORT } = require('./config');
 const app = express();
 
 // Habilitar CORS para permitir solicitudes desde cualquier origen
-app.use(cors());
+app.use(cors({
+  origin: REACT_APP_BACKEND_URL
+}));
 
 
 // Convertidor para formato Json
