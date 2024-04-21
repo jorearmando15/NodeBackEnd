@@ -7,8 +7,7 @@ const directorRoutes = require('./routes/directorRoutes');
 const productoraRoutes = require('./routes/productoraRoutes');
 const tipoRoutes = require('./routes/tipoRoutes');
 const mediaRoutes = require('./routes/mediaRoutes');
-const { PORT } = require('./config');
-
+const { PORT, REACT_APP_BACKEND_URL } = require('./config');
 
 const app = express();
 
