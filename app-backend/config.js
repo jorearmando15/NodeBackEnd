@@ -1,5 +1,5 @@
 // Define las variables de configuración
-const REACT_APP_BACKEND_URL = "http://localhost:3200/"
+const REACT_APP_BACKEND_URL = "*"
 const PORT = process.env.PORT || 3200;
 const DB_HOST = process.env.DB_HOST || 'localhost';
 const DB_USER = process.env.DB_USER || 'root';
