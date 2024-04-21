@@ -1,13 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
 const bodyParser = require('body-parser');
 const generoRoutes = require('./routes/generoRoutes');
 const directorRoutes = require('./routes/directorRoutes');
 const productoraRoutes = require('./routes/productoraRoutes');
 const tipoRoutes = require('./routes/tipoRoutes');
 const mediaRoutes = require('./routes/mediaRoutes');
-const { PORT, REACT_APP_BACKEND_URL } = require('./config');
+const { PORT, REACT_APP_BACKEND_URL } = require('./database/db');
 
 const app = express();
 
