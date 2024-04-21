@@ -28,9 +28,5 @@ db.connect((err) => {
   }
 });
 
-// No exportes directamente la conexión a la base de datos, 
-// ya que queremos asegurarnos de que la conexión se haya realizado antes de usarla.
-// En su lugar, exporta la función que devuelve la conexión.
-module.exports = {
-  db
-};
+// Exporta la conexión a la base de datos directamente
+module.exports = db;
